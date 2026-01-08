@@ -1,0 +1,9 @@
+
+<odoo>
+ <record id="seq_inventory_ticket" model="ir.sequence">
+  <field name="name">Ticket Operativo</field>
+  <field name="code">inventory.ticket</field>
+  <field name="prefix">TCK-%(year)s-</field>
+  <field name="padding">5</field>
+ </record>
+</odoo>

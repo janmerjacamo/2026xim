@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_weapon_all,weapon_all,model_inventory_weapon,,1,1,1,1
+access_equipment_all,equipment_all,model_inventory_equipment,,1,1,1,1
+access_sim_all,sim_all,model_inventory_sim,,1,1,1,1
+access_ticket_all,ticket_all,model_inventory_ticket,,1,1,1,1
+access_custody_all,custody_all,model_inventory_custody,,1,1,1,1

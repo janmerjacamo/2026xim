@@ -1,0 +1,9 @@
+
+<odoo>
+ <menuitem id="menu_inventory_operativo_root" name="Inventario Operativo"/>
+ <menuitem id="menu_inventory_weapon" name="Armas" parent="menu_inventory_operativo_root"/>
+ <menuitem id="menu_inventory_equipment" name="Equipos" parent="menu_inventory_operativo_root"/>
+ <menuitem id="menu_inventory_sim" name="SIM" parent="menu_inventory_operativo_root"/>
+ <menuitem id="menu_inventory_ticket" name="Tickets" parent="menu_inventory_operativo_root"/>
+ <menuitem id="menu_inventory_custody" name="Custodia" parent="menu_inventory_operativo_root"/>
+</odoo>
