@@ -1,0 +1,3 @@
+"name","default_code","barcode","type","categ_id/id","uom_id/id","uom_po_id/id","tracking","x_estatus_operativo","x_tipo_arma","x_calibre","x_imei"
+"Ejemplo Pistola","ARM-001","","product","product.product_category_all","uom.product_uom_unit","uom.product_uom_unit","serial","disponible","pistola","9mm",""
+"Ejemplo GPS","GPS-001","","product","product.product_category_all","uom.product_uom_unit","uom.product_uom_unit","serial","disponible","","","123456789012345"

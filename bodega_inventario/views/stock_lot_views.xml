@@ -1,0 +1,20 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_stock_lot_form_bodega" model="ir.ui.view">
+        <field name="name">stock.lot.form.bodega</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Bodega / Asignación">
+                    <field name="x_estatus_activo"/>
+                    <field name="x_persona_asignada"/>
+                    <field name="x_fecha_asignacion"/>
+                    <field name="x_fecha_estimada_retorno"/>
+                    <field name="x_observaciones"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

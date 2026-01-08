@@ -1,0 +1,39 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Alertas de vencimiento legal (diario) -->
+    <record id="cron_alerta_vencimiento_legal" model="ir.cron">
+        <field name="name">Alertas vencimiento legal</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_alerta_vencimiento_legal()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active">True</field>
+    </record>
+
+    <!-- Actualización estatus automático (diario) -->
+    <record id="cron_actualizar_estatus_por_asignacion" model="ir.cron">
+        <field name="name">Actualizar estatus por asignación</field>
+        <field name="model_id" ref="stock.model_stock_lot"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_actualizar_estatus_por_asignacion()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active">True</field>
+    </record>
+
+    <!-- Reporte de préstamos vencidos (diario) -->
+    <record id="cron_reportar_prestamos_vencidos" model="ir.cron">
+        <field name="name">Reporte de préstamos vencidos</field>
+        <field name="model_id" ref="stock.model_stock_lot"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_reportar_prestamos_vencidos()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

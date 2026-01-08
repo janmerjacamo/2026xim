@@ -1,0 +1,62 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_bodega_ticket_tree" model="ir.ui.view">
+        <field name="name">bodega.ticket.tree</field>
+        <field name="model">bodega.ticket</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="fecha_hora"/>
+                <field name="depto_solicitante"/>
+                <field name="requerimiento"/>
+                <field name="estado"/>
+                <field name="stock_picking_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_bodega_ticket_form" model="ir.ui.view">
+        <field name="name">bodega.ticket.form</field>
+        <field name="model">bodega.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Ticket de Bodega">
+                <header>
+                    <button name="action_aprobar" type="object" string="Aprobar" states="borrador" class="btn-primary"/>
+                    <button name="action_generar_picking" type="object" string="Generar transferencia" states="aprobado" class="btn-success"/>
+                    <button name="write" type="object" string="Cancelar" attrs="{'invisible': [('estado', '=', 'cancelado')]}"/>
+                    <field name="estado" widget="statusbar" statusbar_visible="borrador,aprobado,procesado,cancelado"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="fecha_hora"/>
+                            <field name="depto_solicitante"/>
+                            <field name="requerimiento"/>
+                        </group>
+                        <group>
+                            <field name="no_orden"/>
+                            <field name="no_formulario"/>
+                            <field name="stock_picking_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="descripcion"/>
+                        <field name="observaciones"/>
+                    </group>
+                    <chatter/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_bodega_root" name="Bodega" parent="stock.menu_stock_root" sequence="100"/>
+    <menuitem id="menu_bodega_tickets" name="Tickets de Bodega" parent="menu_bodega_root" action="action_bodega_ticket"/>
+
+    <record id="action_bodega_ticket" model="ir.actions.act_window">
+        <field name="name">Tickets de Bodega</field>
+        <field name="res_model">bodega.ticket</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

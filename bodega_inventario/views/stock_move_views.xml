@@ -1,0 +1,18 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_stock_move_form_bodega" model="ir.ui.view">
+        <field name="name">stock.move.form.bodega</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_stock_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Bodega / Ticket">
+                    <field name="x_ticket_bodega_id"/>
+                    <field name="x_requerimiento"/>
+                    <field name="x_no_formulario"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

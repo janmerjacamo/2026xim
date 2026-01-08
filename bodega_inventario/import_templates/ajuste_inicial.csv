@@ -1,0 +1,2 @@
+"product_id/id","location_id/id","lot_id/id","package_id/id","owner_id/id","product_qty","inventory_date"
+"product.product_product_1","stock.stock_location_stock","","","","10","2026-01-01"

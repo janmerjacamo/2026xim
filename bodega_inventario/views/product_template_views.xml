@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_product_template_form_bodega" model="ir.ui.view">
+        <field name="name">product.template.form.bodega</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook" position="inside">
+                <page string="Bodega">
+                    <group string="Estatus / Herramientas">
+                        <field name="x_estatus_operativo"/>
+                        <field name="x_cantidad_en_uso" readonly="1"/>
+                    </group>
+                    <group string="Armas">
+                        <field name="x_tipo_arma"/>
+                        <field name="x_calibre"/>
+                        <field name="x_tenencia"/>
+                        <field name="x_portacion"/>
+                        <field name="x_carne_acreditacion"/>
+                        <field name="x_carne_acreditacion_adjunto" widget="binary"/>
+                        <field name="x_fecha_vencimiento_legal"/>
+                        <field name="x_municion_x_arma"/>
+                        <field name="x_copia_legalizada_vigente"/>
+                        <field name="x_copia_legalizada_adjunto" widget="binary"/>
+                    </group>
+                    <group string="Equipos GPS / IoT">
+                        <field name="x_imei"/>
+                        <field name="x_placa"/>
+                        <field name="x_no_factura"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

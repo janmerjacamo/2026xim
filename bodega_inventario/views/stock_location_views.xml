@@ -1,0 +1,19 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_stock_location_form_bodega" model="ir.ui.view">
+        <field name="name">stock.location.form.bodega</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Bodega / Datos adicionales">
+                    <field name="x_estatus_ubicacion"/>
+                    <field name="x_fecha_finalizacion"/>
+                    <field name="x_tipo_ubicacion"/>
+                    <field name="x_supervisor_responsable"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
