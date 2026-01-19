@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "RRHH",
+
+    'summary': """ Módulo de RRHH para Guatemala """,
+
+    'description': """
+        Módulo de RRHH para Guatemala
+    """,
+
+    'author': "Rodolfo Borstcheff",
+    'website': "http://www.aquih.com",
+
+    'category': 'Uncategorized',
+    'version': '2.2',
+
+    'depends': ['base', 'hr', 'hr_contract', 'hr_payroll_account', 'l10n_gt_extra', 'account_followup', 'hr_holidays', 'hr_work_entry'],
+
+    'data': [
+        'data/rrhh_data.xml',
+        'data/rrhh_paperformat.xml',
+        'data/hr_payroll_expense_data.xml',
+        'views/hr_employee_views.xml',
+        'views/hr_contract_views.xml',
+        'views/hr_payroll_views.xml',
+        'views/rrhh_planilla_views.xml',
+        'views/res_company_views.xml',
+        'views/report.xml',
+        'views/recibo.xml',
+        'views/libro_salarios.xml',
+        'views/hr_work_entry_views.xml',
+        'wizard/planilla_pdf.xml',
+        'wizard/planilla.xml',
+        'wizard/rrhh_libro_salarios_view.xml',
+        'wizard/rrhh_informe_empleador_view.xml',
+        'wizard/igss.xml',
+        'wizard/cerrar_nominas.xml',
+        'wizard/rrhh_informe_isr_view.xml',
+        'security/ir.model.access.csv',
+        'security/rrhh_security.xml',
+        'views/hr_leave_type_views.xml',
+    ],
+    'license': 'LGPL-3',
+}
